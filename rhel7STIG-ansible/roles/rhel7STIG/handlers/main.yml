@@ -1,0 +1,12 @@
+- name: dconf_update
+  command: dconf update
+- name: auditd_restart
+  service: auditd
+  state: restarted
+- name: ssh_restart
+  service:
+    name: sshd
+    state: restarted
+# - name: do_reboot
+#   reboot:
+#     pre_reboot_delay: 60
