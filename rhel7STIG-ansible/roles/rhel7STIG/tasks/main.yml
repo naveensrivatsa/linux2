@@ -647,16 +647,16 @@
 #   notify: auditd_restart
 #   when:
 #     - rhel7STIG_stigrule_204506_Manage
-# R-204506 RHEL-07-030201
-- name: stigrule_204506__etc_audisp_plugins_d_au_remote_conf_path
-  lineinfile:
-    path: /etc/audisp/plugins.d/au-remote.conf
-    regexp: '^path = '
-    line: "{{ rhel7STIG_stigrule_204506__etc_audisp_plugins_d_au_remote_conf_path_Line }}"
-    create: yes
-  notify: auditd_restart
-  when:
-    - rhel7STIG_stigrule_204506_Manage
+# # R-204506 RHEL-07-030201
+# - name: stigrule_204506__etc_audisp_plugins_d_au_remote_conf_path
+#   lineinfile:
+#     path: /etc/audisp/plugins.d/au-remote.conf
+#     regexp: '^path = '
+#     line: "{{ rhel7STIG_stigrule_204506__etc_audisp_plugins_d_au_remote_conf_path_Line }}"
+#     create: yes
+#   notify: auditd_restart
+#   when:
+#     - rhel7STIG_stigrule_204506_Manage
 # R-204506 RHEL-07-030201
 - name: stigrule_204506__etc_audisp_plugins_d_au_remote_conf_type
   lineinfile:
