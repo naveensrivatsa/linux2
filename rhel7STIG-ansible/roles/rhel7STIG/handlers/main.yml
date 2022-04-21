@@ -1,7 +1,10 @@
 - name: dconf_update
   command: dconf update
 - name: auditd_restart
-  command: /sbin/service auditd restart
+  service:
+    name: auditd
+    state: restarted
+    use: service
 - name: ssh_restart
   service:
     name: sshd
