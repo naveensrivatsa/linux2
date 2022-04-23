@@ -48,7 +48,7 @@
     }
    {
      "type": "shell"
-     "script": "scripts/scanning.sh"
+     "script": "scripts/scan.sh"
    }
   ],
   "post-processors": [
