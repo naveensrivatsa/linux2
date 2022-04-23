@@ -47,7 +47,7 @@
       "script": "scripts/cleanup.sh"
     },
    {
-     "type": "shell"
+     "type": "shell",
      "script": "scripts/scan.sh"
    }
   ],
