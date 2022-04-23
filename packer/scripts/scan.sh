@@ -2,7 +2,7 @@
 
 #OpenSCAP compliance scanning
 
-yum install -y openscap-scanner
+sudo yum install -y openscap-scanner
 sudo yum install -y scap-security-guide
 mkdir -p /var/tmp/roles/security
 sudo wget --quiet -O /var/tmp/roles/security/Red_Hat_Enterprise_Linux_7.xml https://www.redhat.com/security/data/oval/Red_Hat_Enterprise_Linux_7.xml
