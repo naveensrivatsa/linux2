@@ -12,4 +12,4 @@ mkdir -p /var/tmp/roles/security/output
 echo "Running PCI compliance scan..."
 sudo oscap xccdf eval --fetch-remote-resources --profile xccdf_org.ssgproject.content_profile_pci-dss --results-arf /var/tmp/roles/securityoutput/arf-pci-dss.xml --report /var/tmp/roles/security/report-pci-dss.html /usr/share/xml/scap/ssg/content/ssg-amzn2-ds.xml
 echo "Running DISA STIG compliance scan..."
-sudo oscap xccdf eval --fetch-remote-resources --profile xccdf_org.ssgproject.content_profile_stig-rhel7-disa --results-arf /var/tmp/roles/securityoutput/arf-disa-stig.xml --report /var/tmp/roles/security/report-disa-stig.html /usr/share/xml/scap/ssg/content/ssg-amzn2-ds.xml
+sudo oscap xccdf eval --fetch-remote-resources --profile xccdf_org.ssgproject.content_profile_stig-rhel7-disa --results-arf /var/tmp/roles/security/output/arf-disa-stig.xml --report /var/tmp/roles/security/report-disa-stig.html /usr/share/xml/scap/ssg/content/ssg-amzn2-ds.xml
