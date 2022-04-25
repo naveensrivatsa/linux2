@@ -20,7 +20,7 @@
         ],
         "most_recent": true
       },
-      "instance_type": "t2.large",
+      "instance_type": "t2.xlarge",
       "ssh_username": "{{user `ssh_username`}}",
       "ami_name": "golden-image-test",
       "tags":{
