@@ -467,26 +467,26 @@
     no_extra_spaces: yes
   when:
     - rhel7STIG_stigrule_204452_Manage
-# # R-204453 RHEL-07-020210
-# - name: stigrule_204453__etc_selinux_config
-#   lineinfile:
-#     path: /etc/selinux/config
-#     regexp: '^SELINUX='
-#     line: "{{ rhel7STIG_stigrule_204453__etc_selinux_config_Line }}"
-#     create: yes
-#   notify: do_reboot
-#   when:
-#     - rhel7STIG_stigrule_204453_Manage
-# # R-204454 RHEL-07-020220
-# - name: stigrule_204454__etc_selinux_config
-#   lineinfile:
-#     path: /etc/selinux/config
-#     regexp: '^SELINUXTYPE='
-#     line: "{{ rhel7STIG_stigrule_204454__etc_selinux_config_Line }}"
-#     create: yes
-#   notify: do_reboot
-#   when:
-#     - rhel7STIG_stigrule_204454_Manage
+# R-204453 RHEL-07-020210
+- name: stigrule_204453__etc_selinux_config
+  lineinfile:
+    path: /etc/selinux/config
+    regexp: '^SELINUX='
+    line: "{{ rhel7STIG_stigrule_204453__etc_selinux_config_Line }}"
+    create: yes
+  notify: do_reboot
+  when:
+    - rhel7STIG_stigrule_204453_Manage
+# R-204454 RHEL-07-020220
+- name: stigrule_204454__etc_selinux_config
+  lineinfile:
+    path: /etc/selinux/config
+    regexp: '^SELINUXTYPE='
+    line: "{{ rhel7STIG_stigrule_204454__etc_selinux_config_Line }}"
+    create: yes
+  notify: do_reboot
+  when:
+    - rhel7STIG_stigrule_204454_Manage
 # R-204455 RHEL-07-020230
 - name: stigrule_204455_systemctl_mask_ctrl_alt_del_target
   systemd:
@@ -637,118 +637,118 @@
     create: yes
   when:
     - rhel7STIG_stigrule_204504_Manage
-# # R-204506 RHEL-07-030201
-# - name: stigrule_204506__etc_audisp_plugins_d_au_remote_conf_direction
-#   lineinfile:
-#     path: /etc/audisp/plugins.d/au-remote.conf
-#     regexp: '^direction = '
-#     line: "{{ rhel7STIG_stigrule_204506__etc_audisp_plugins_d_au_remote_conf_direction_Line }}"
-#     create: yes
-#   notify: auditd_restart
-#   when:
-#     - rhel7STIG_stigrule_204506_Manage
-# # R-204506 RHEL-07-030201
-# - name: stigrule_204506__etc_audisp_plugins_d_au_remote_conf_path
-#   lineinfile:
-#     path: /etc/audisp/plugins.d/au-remote.conf
-#     regexp: '^path = '
-#     line: "{{ rhel7STIG_stigrule_204506__etc_audisp_plugins_d_au_remote_conf_path_Line }}"
-#     create: yes
-#   notify: auditd_restart
-#   when:
-#     - rhel7STIG_stigrule_204506_Manage
-# # R-204506 RHEL-07-030201
-# - name: stigrule_204506__etc_audisp_plugins_d_au_remote_conf_type
-#   lineinfile:
-#     path: /etc/audisp/plugins.d/au-remote.conf
-#     regexp: '^type = '
-#     line: "{{ rhel7STIG_stigrule_204506__etc_audisp_plugins_d_au_remote_conf_type_Line }}"
-#     create: yes
-#   notify: auditd_restart
-#   when:
-#     - rhel7STIG_stigrule_204506_Manage
-# # R-204507 RHEL-07-030210
-# - name: stigrule_204507__etc_audisp_audispd_conf
-#   lineinfile:
-#     path: /etc/audisp/audispd.conf
-#     regexp: '^overflow_action = '
-#     line: "{{ rhel7STIG_stigrule_204507__etc_audisp_audispd_conf_Line }}"
-#     create: yes
-#   notify: auditd_restart
-#   when:
-#     - rhel7STIG_stigrule_204507_Manage
-# # R-204508 RHEL-07-030211
-# - name: stigrule_204508__etc_audisp_audispd_conf
-#   lineinfile:
-#     path: /etc/audisp/audispd.conf
-#     regexp: '^name_format = '
-#     line: "{{ rhel7STIG_stigrule_204508__etc_audisp_audispd_conf_Line }}"
-#     create: yes
-#   notify: auditd_restart
-#   when:
-#     - rhel7STIG_stigrule_204508_Manage
-# # R-204509 RHEL-07-030300
-# # Ensure to set the IP address of the log aggregation server.
-# - name: stigrule_204509__etc_audisp_audisp_remote_conf
-#   lineinfile:
-#     path: /etc/audisp/audisp-remote.conf
-#     regexp: '^remote_server = '
-#     line: "{{ rhel7STIG_stigrule_204509__etc_audisp_audisp_remote_conf_Line }}"
-#     create: yes
-#   notify: auditd_restart
-#   when:
-#     - rhel7STIG_stigrule_204509_Manage
-# # R-204510 RHEL-07-030310
-# # Ensure to set the IP address of the log aggregation server.
-# - name: stigrule_204510__etc_audisp_audisp_remote_conf
-#   lineinfile:
-#     path: /etc/audisp/audisp-remote.conf
-#     regexp: '^enable_krb5 = '
-#     line: "{{ rhel7STIG_stigrule_204510__etc_audisp_audisp_remote_conf_Line }}"
-#     create: yes
-#   notify: auditd_restart
-#   when:
-#     - rhel7STIG_stigrule_204510_Manage
-# # R-204511 RHEL-07-030320
-# - name: stigrule_204511__etc_audisp_audisp_remote_conf
-#   lineinfile:
-#     path: /etc/audisp/audisp-remote.conf
-#     regexp: '^disk_full_action = '
-#     line: "{{ rhel7STIG_stigrule_204511__etc_audisp_audisp_remote_conf_Line }}"
-#     create: yes
-#   notify: auditd_restart
-#   when:
-#     - rhel7STIG_stigrule_204511_Manage
-# # R-204512 RHEL-07-030321
-# - name: stigrule_204512__etc_audisp_audisp_remote_conf
-#   lineinfile:
-#     path: /etc/audisp/audisp-remote.conf
-#     regexp: '^network_failure_action = '
-#     line: "{{ rhel7STIG_stigrule_204512__etc_audisp_audisp_remote_conf_Line }}"
-#     create: yes
-#   notify: auditd_restart
-#   when:
-#     - rhel7STIG_stigrule_204512_Manage
-# # R-204514 RHEL-07-030340
-# - name: stigrule_204514__etc_audit_auditd_conf
-#   lineinfile:
-#     path: /etc/audit/auditd.conf
-#     regexp: '^space_left_action = '
-#     line: "{{ rhel7STIG_stigrule_204514__etc_audit_auditd_conf_Line }}"
-#     create: yes
-#   notify: auditd_restart
-#   when:
-#     - rhel7STIG_stigrule_204514_Manage
-# # R-204515 RHEL-07-030350
-# - name: stigrule_204515__etc_audit_auditd_conf
-#   lineinfile:
-#     path: /etc/audit/auditd.conf
-#     regexp: '^action_mail_acct = '
-#     line: "{{ rhel7STIG_stigrule_204515__etc_audit_auditd_conf_Line }}"
-#     create: yes
-#   notify: auditd_restart
-#   when:
-#     - rhel7STIG_stigrule_204515_Manage
+# R-204506 RHEL-07-030201
+- name: stigrule_204506__etc_audisp_plugins_d_au_remote_conf_direction
+  lineinfile:
+    path: /etc/audisp/plugins.d/au-remote.conf
+    regexp: '^direction = '
+    line: "{{ rhel7STIG_stigrule_204506__etc_audisp_plugins_d_au_remote_conf_direction_Line }}"
+    create: yes
+  notify: auditd_restart
+  when:
+    - rhel7STIG_stigrule_204506_Manage
+# R-204506 RHEL-07-030201
+- name: stigrule_204506__etc_audisp_plugins_d_au_remote_conf_path
+  lineinfile:
+    path: /etc/audisp/plugins.d/au-remote.conf
+    regexp: '^path = '
+    line: "{{ rhel7STIG_stigrule_204506__etc_audisp_plugins_d_au_remote_conf_path_Line }}"
+    create: yes
+  notify: auditd_restart
+  when:
+    - rhel7STIG_stigrule_204506_Manage
+# R-204506 RHEL-07-030201
+- name: stigrule_204506__etc_audisp_plugins_d_au_remote_conf_type
+  lineinfile:
+    path: /etc/audisp/plugins.d/au-remote.conf
+    regexp: '^type = '
+    line: "{{ rhel7STIG_stigrule_204506__etc_audisp_plugins_d_au_remote_conf_type_Line }}"
+    create: yes
+  notify: auditd_restart
+  when:
+    - rhel7STIG_stigrule_204506_Manage
+# R-204507 RHEL-07-030210
+- name: stigrule_204507__etc_audisp_audispd_conf
+  lineinfile:
+    path: /etc/audisp/audispd.conf
+    regexp: '^overflow_action = '
+    line: "{{ rhel7STIG_stigrule_204507__etc_audisp_audispd_conf_Line }}"
+    create: yes
+  notify: auditd_restart
+  when:
+    - rhel7STIG_stigrule_204507_Manage
+# R-204508 RHEL-07-030211
+- name: stigrule_204508__etc_audisp_audispd_conf
+  lineinfile:
+    path: /etc/audisp/audispd.conf
+    regexp: '^name_format = '
+    line: "{{ rhel7STIG_stigrule_204508__etc_audisp_audispd_conf_Line }}"
+    create: yes
+  notify: auditd_restart
+  when:
+    - rhel7STIG_stigrule_204508_Manage
+# R-204509 RHEL-07-030300
+# Ensure to set the IP address of the log aggregation server.
+- name: stigrule_204509__etc_audisp_audisp_remote_conf
+  lineinfile:
+    path: /etc/audisp/audisp-remote.conf
+    regexp: '^remote_server = '
+    line: "{{ rhel7STIG_stigrule_204509__etc_audisp_audisp_remote_conf_Line }}"
+    create: yes
+  notify: auditd_restart
+  when:
+    - rhel7STIG_stigrule_204509_Manage
+# R-204510 RHEL-07-030310
+# Ensure to set the IP address of the log aggregation server.
+- name: stigrule_204510__etc_audisp_audisp_remote_conf
+  lineinfile:
+    path: /etc/audisp/audisp-remote.conf
+    regexp: '^enable_krb5 = '
+    line: "{{ rhel7STIG_stigrule_204510__etc_audisp_audisp_remote_conf_Line }}"
+    create: yes
+  notify: auditd_restart
+  when:
+    - rhel7STIG_stigrule_204510_Manage
+# R-204511 RHEL-07-030320
+- name: stigrule_204511__etc_audisp_audisp_remote_conf
+  lineinfile:
+    path: /etc/audisp/audisp-remote.conf
+    regexp: '^disk_full_action = '
+    line: "{{ rhel7STIG_stigrule_204511__etc_audisp_audisp_remote_conf_Line }}"
+    create: yes
+  notify: auditd_restart
+  when:
+    - rhel7STIG_stigrule_204511_Manage
+# R-204512 RHEL-07-030321
+- name: stigrule_204512__etc_audisp_audisp_remote_conf
+  lineinfile:
+    path: /etc/audisp/audisp-remote.conf
+    regexp: '^network_failure_action = '
+    line: "{{ rhel7STIG_stigrule_204512__etc_audisp_audisp_remote_conf_Line }}"
+    create: yes
+  notify: auditd_restart
+  when:
+    - rhel7STIG_stigrule_204512_Manage
+# R-204514 RHEL-07-030340
+- name: stigrule_204514__etc_audit_auditd_conf
+  lineinfile:
+    path: /etc/audit/auditd.conf
+    regexp: '^space_left_action = '
+    line: "{{ rhel7STIG_stigrule_204514__etc_audit_auditd_conf_Line }}"
+    create: yes
+  notify: auditd_restart
+  when:
+    - rhel7STIG_stigrule_204514_Manage
+# R-204515 RHEL-07-030350
+- name: stigrule_204515__etc_audit_auditd_conf
+  lineinfile:
+    path: /etc/audit/auditd.conf
+    regexp: '^action_mail_acct = '
+    line: "{{ rhel7STIG_stigrule_204515__etc_audit_auditd_conf_Line }}"
+    create: yes
+  notify: auditd_restart
+  when:
+    - rhel7STIG_stigrule_204515_Manage
 # R-204516 RHEL-07-030360
 - name : stigrule_204516__etc_audit_rules_d_audit_rules_euid_b32
   lineinfile:

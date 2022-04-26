@@ -1,0 +1,39 @@
+---
+# tasks file for ami-scan
+---
+# tasks file for ami-scan
+- name: install openscap scanner
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - openscap-scanner
+    - scap-security-guide
+
+- name: create /var/tmp/roles/security directory
+  file:
+   path: /var/tmp/roles/security/output
+   state: directory
+   recurse: yes
+
+- name: obtain rhel7 security xml content
+  command: wget --quiet -O \
+    /var/tmp/roles/security/Red_Hat_Enterprise_Linux_7.xml \
+    https://www.redhat.com/security/data/oval/Red_Hat_Enterprise_Linux_7.xml
+  
+
+# - block:
+- name: Running PCI compliance scan
+  command: oscap xccdf eval \
+    --profile {{ oscap_profile }} \
+    --results-arf {{ results-arf }} \
+    --report {{ report }} \
+    --fetch-remote-resources \
+    /usr/share/xml/scap/ssg/content/{{ oscap_policy }}.xml
+
+    # always:
+    # - name: download report
+    #   fetch:
+    #     src: "{{ report }}"
+    #     dest: ../oscap-reports/{{ inventory_hostname }}.html
+    #     flat: yes
