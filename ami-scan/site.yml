@@ -1,5 +1,6 @@
 - hosts: localhost
   gather_facts: no
+  any_errors_fatal: false
   become: yes
   roles:
     - ami-scan
