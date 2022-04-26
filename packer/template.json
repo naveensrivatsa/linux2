@@ -46,10 +46,6 @@
       "type": "shell",
       "script": "scripts/cleanup.sh"
     },
-   {
-     "type": "shell",
-     "script": "scripts/scan.sh"
-   }
   ],
   "post-processors": [
     [
