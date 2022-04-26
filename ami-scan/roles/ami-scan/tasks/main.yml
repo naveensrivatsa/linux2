@@ -1,7 +1,5 @@
 ---
 # tasks file for ami-scan
----
-# tasks file for ami-scan
 - name: install openscap scanner
   package:
     name: "{{ item }}"
