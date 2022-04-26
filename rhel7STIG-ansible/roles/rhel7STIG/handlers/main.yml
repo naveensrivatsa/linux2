@@ -5,8 +5,8 @@
     name: auditd
     state: "{{ item }}"
   with_items:
-    - stop
-    - start
+    - stopped
+    - started
 - name: ssh_restart
   service:
     name: sshd
