@@ -3,8 +3,8 @@
 - name: auditd_restart
   command: service auditd {{ item }}
   with_items:
-    - stopped
-    - started
+    - stop
+    - start
 - name: ssh_restart
   service:
     name: sshd
