@@ -467,26 +467,26 @@
     no_extra_spaces: yes
   when:
     - rhel7STIG_stigrule_204452_Manage
-# R-204453 RHEL-07-020210
-- name: stigrule_204453__etc_selinux_config
-  lineinfile:
-    path: /etc/selinux/config
-    regexp: '^SELINUX='
-    line: "{{ rhel7STIG_stigrule_204453__etc_selinux_config_Line }}"
-    create: yes
-  notify: do_reboot
-  when:
-    - rhel7STIG_stigrule_204453_Manage
-# R-204454 RHEL-07-020220
-- name: stigrule_204454__etc_selinux_config
-  lineinfile:
-    path: /etc/selinux/config
-    regexp: '^SELINUXTYPE='
-    line: "{{ rhel7STIG_stigrule_204454__etc_selinux_config_Line }}"
-    create: yes
-  notify: do_reboot
-  when:
-    - rhel7STIG_stigrule_204454_Manage
+# # R-204453 RHEL-07-020210
+# - name: stigrule_204453__etc_selinux_config
+#   lineinfile:
+#     path: /etc/selinux/config
+#     regexp: '^SELINUX='
+#     line: "{{ rhel7STIG_stigrule_204453__etc_selinux_config_Line }}"
+#     create: yes
+#   notify: do_reboot
+#   when:
+#     - rhel7STIG_stigrule_204453_Manage
+# # R-204454 RHEL-07-020220
+# - name: stigrule_204454__etc_selinux_config
+#   lineinfile:
+#     path: /etc/selinux/config
+#     regexp: '^SELINUXTYPE='
+#     line: "{{ rhel7STIG_stigrule_204454__etc_selinux_config_Line }}"
+#     create: yes
+#   notify: do_reboot
+#   when:
+#     - rhel7STIG_stigrule_204454_Manage
 # R-204455 RHEL-07-020230
 - name: stigrule_204455_systemctl_mask_ctrl_alt_del_target
   systemd:
