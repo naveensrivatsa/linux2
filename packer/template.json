@@ -52,7 +52,7 @@
       "role_paths": [
         "../ami-scan/roles/ami-scan"
       ],
-      "group_vars": "../ami-scan/roles/ami-scan/defaults"
+      "group_vars": "../ami-scan/roles/ami-scan/defaults",
       "extra_arguments": [ "-vvvv" ]
     }
   ],
