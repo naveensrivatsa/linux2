@@ -1,6 +1,6 @@
 ---
 # defaults file for ami-scan
-oscap_profile: xccdf_org.ssgproject.content_profile_pci-dss
-oscap_policy: ssg-amzn2-ds
-results-arf: /var/tmp/roles/security/output/arf-pci-dss.xml
-report: /var/tmp/roles/security/output/report-pci-dss.html
+oscap_profile: 'xccdf_org.ssgproject.content_profile_pci-dss'
+oscap_policy: 'ssg-amzn2-ds'
+results-arf: '/var/tmp/roles/security/output/arf-pci-dss.xml'
+report: '/var/tmp/roles/security/output/report-pci-dss.html'
