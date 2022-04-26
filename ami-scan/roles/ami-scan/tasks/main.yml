@@ -29,7 +29,24 @@
     --fetch-remote-resources \
     /usr/share/xml/scap/ssg/content/ssg-amzn2-ds.xml
   ignore_errors: yes
+  
+- name: Running DISA STIG compliance scan
+  command: oscap xccdf eval \
+    --profile xccdf_org.ssgproject.content_profile_stig-rhel7-disa \
+    --results-arf /var/tmp/roles/security/output/arf-disa-stig.xml \
+    --report /var/tmp/roles/security/output/report-disa-stig.html \
+    --fetch-remote-resources \
+    /usr/share/xml/scap/ssg/content/ssg-amzn2-ds.xml
+  ignore_errors: yes
 
+- name: openSCAP Vuln Scanning
+  command: oscap oval eval \
+    --profile xccdf_org.ssgproject.content_profile_stig-rhel7-disa \
+    --results /var/tmp/roles/security/output/oval-vulns.xml \
+    --report /var/tmp/roles/security/output/report-vulns.html \
+    /var/tmp/roles/security/Red_Hat_Enterprise_Linux_7.xml
+  ignore_errors: yes
+  
     # always:
     # - name: download report
     #   fetch:
