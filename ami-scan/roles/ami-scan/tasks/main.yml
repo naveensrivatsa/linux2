@@ -23,11 +23,11 @@
 # - block:
 - name: Running PCI compliance scan
   command: oscap xccdf eval \
-    --profile {{ oscap_profile }} \
-    --results-arf {{ results-arf }} \
-    --report {{ report }} \
+    --profile xccdf_org.ssgproject.content_profile_pci-dss \
+    --results-arf /var/tmp/roles/security/output/arf-pci-dss.xml \
+    --report /var/tmp/roles/security/output/report-pci-dss.html \
     --fetch-remote-resources \
-    /usr/share/xml/scap/ssg/content/{{ oscap_policy }}.xml
+    /usr/share/xml/scap/ssg/content/ssg-amzn2-ds.xml
 
     # always:
     # - name: download report
