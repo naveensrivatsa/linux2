@@ -53,6 +53,7 @@
         "../ami-scan/roles/ami-scan"
       ],
       "group_vars": "../ami-scan/roles/ami-scan/defaults"
+      "extra_arguments": [ "-vvvv" ]
     }
   ],
   "post-processors": [
