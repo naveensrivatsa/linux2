@@ -1,9 +1,7 @@
 - name: dconf_update
   command: dconf update
 - name: auditd_restart
-  service:
-    name: auditd
-    state: "{{ item }}"
+  command: service auditd {{ item }}
   with_items:
     - stopped
     - started
