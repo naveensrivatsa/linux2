@@ -28,6 +28,7 @@
     --report /var/tmp/roles/security/output/report-pci-dss.html \
     --fetch-remote-resources \
     /usr/share/xml/scap/ssg/content/ssg-amzn2-ds.xml
+   ignore_errors: true
 
     # always:
     # - name: download report
