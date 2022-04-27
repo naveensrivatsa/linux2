@@ -43,10 +43,6 @@
       "group_vars": "../rhel7STIG-ansible/roles/rhel7STIG/defaults"
     },
     {
-      "type": "shell",
-      "script": "scripts/cleanup.sh"
-    },
-    {
       "inline": "sudo reboot",
       "type": "shell",
       "expect_disconnect": true,
@@ -60,7 +56,11 @@
       ],
       "group_vars": "../ami-scan/roles/ami-scan/defaults",
       "extra_arguments": [ "-vvvv" ]
-    }
+    },
+    {
+      "type": "shell",
+      "script": "scripts/cleanup.sh"
+    },
   ],
   "post-processors": [
     [
