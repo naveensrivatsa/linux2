@@ -60,7 +60,7 @@
     {
       "type": "shell",
       "script": "scripts/cleanup.sh"
-    },
+    }
   ],
   "post-processors": [
     [
