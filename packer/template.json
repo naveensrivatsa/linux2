@@ -50,7 +50,7 @@
       "inline": "sudo reboot",
       "type": "shell",
       "expect_disconnect": true,
-      "pause_before" = "60s"
+      "pause_before": "60s"
     },
     {
       "type": "ansible-local",
