@@ -2,5 +2,6 @@
 
 # Uninstall Ansible and remove PPA.
 
-sudo yum remove ansible2 -y
+sudo yum remove ansible.noarch -y
 
+sudo reboot
