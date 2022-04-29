@@ -1,5 +1,7 @@
 - hosts: all
   gather_facts: no
   become: yes
+  sudo: yes
+  become_user: ec2-user
   roles:
     - rhel7STIG
