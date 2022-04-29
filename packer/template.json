@@ -26,7 +26,7 @@
       "tags":{
         "Name": "al2-1"
       }
-    },
+    }
   ],
   "_comment": "Running Ansible roles on the image",
   "provisioners": [
