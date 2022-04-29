@@ -31,7 +31,7 @@
   "_comment": "Running Ansible roles on the image",
   "provisioners": [
     {
-      "type": "ansible-local",
+      "type": "ansible",
       "playbook_file": "../rhel7STIG-ansible/site.yml",
       "role_paths": [
         "../rhel7STIG-ansible/roles/rhel7STIG"
