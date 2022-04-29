@@ -33,10 +33,6 @@
     {
       "type": "ansible",
       "playbook_file": "../rhel7STIG-ansible/site.yml",
-      "role_paths": [
-        "../rhel7STIG-ansible/roles/rhel7STIG"
-      ],
-      "group_vars": "../rhel7STIG-ansible/roles/rhel7STIG/defaults"
     },
     {
       "type": "ansible-local",
